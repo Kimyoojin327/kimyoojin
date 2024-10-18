@@ -144,19 +144,6 @@
       });
     });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        if (typeof aosInit === 'function') {
-          aosInit();
-        }
-      }, false);
-    });
-
   });
 
   /**
@@ -218,4 +205,50 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+
+  // portfolio
+  const portfolio_content=new Swiper(".portfolio_content" , {
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    speed : 1000,
+    loop : true,
+    navigation: {
+      nextEl: ".swiper-button-next", 
+      prevEl: ".swiper-button-prev",
+     },
+  });
+  $(".portfolio_info > div").not(":first").hide();
+  $(".portfolio_name > button").click(function () {
+    $(this).addClass("active").siblings().removeClass("active")
+    let idx = $(this).index();
+    $(".portfolio_info > div").eq(idx).fadeIn(500).siblings().fadeOut(0);  
+  });
+
+  //cursor
+  const cousor = document.querySelector('.custom-cursor');
+
+  const animateCursor = (e) => {
+      cousor.style.left = `${e.pageX}px`;
+      cousor.style.top = `${e.pageY}px`;
+  }
+  window.addEventListener('mousemove', animateCursor);
+
+  //클립보드복사
+  function copy() {
+    // 복사문구값 가져오기
+    var copyTxt = document.getElementById("copyTxt");
+  
+    // 복사문구 선택
+    copyTxt.select();
+    copyTxt.setSelectionRange(0, 99999); // Mobile 대응
+  
+     // 복사
+    navigator.clipboard.writeText(copyTxt.value);
+  
+    // 복사완료에 대해 Alert으로 띄우기
+    alert("복사되었습니다.");
+  }
 })();
