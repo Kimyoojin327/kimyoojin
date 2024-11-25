@@ -218,13 +218,4 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-  //cursor
-  const cousor = document.querySelector('.custom-cursor');
-
-  const animateCursor = (e) => {
-      cousor.style.left = `${e.pageX}px`;
-      cousor.style.top = `${e.pageY}px`;
-  }
-  window.addEventListener('mousemove', animateCursor);
-
 })();
