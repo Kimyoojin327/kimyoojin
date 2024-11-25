@@ -59,14 +59,12 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
-  cursor: none;
 }
 
 a {
   color: var(--accent-color);
   text-decoration: none;
   transition: 0.3s;
-  cursor: none;
 }
 
 a:hover {
@@ -97,21 +95,6 @@ h6 {
 ::selection {
   background: var(--accent-color);
   color: #fff;
-}
-
-.custom-cursor{
-  z-index: 9999;
-  opacity: 0.5;
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  z-index: 1000;
-  transform: translate(-30%, -30%);
-  pointer-events: none;
-  transition: all 0.3s ease;
-  transition-property: background, transform;
-  transform-origin: 100% 100%;
-  background-size: cover;
 }
 
 /* PHP Email Form Messages
@@ -321,7 +304,6 @@ h6 {
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
-    cursor: none;
     transition: color 0.3s;
   }
 
@@ -541,7 +523,6 @@ h6 {
 # Scroll Top Button
 --------------------------------------------------------------*/
 .scroll-top {
-  display: none;
   position: fixed;
   visibility: hidden;
   opacity: 0;
@@ -1018,7 +999,6 @@ section,
   padding: 10px 0;
   width: 120px;
   border-radius: 10px;
-  cursor: none;
 }
 .portfolio .portfolio_name button.active:nth-child(1){
   background: var(--accent-color);
@@ -1042,6 +1022,7 @@ section,
   gap: 20px;
   text-align: center;
   padding: 0 0 40px;
+  cursor: pointer;
 }
 
 .portfolio .portfolio-filters li {
@@ -1052,7 +1033,6 @@ section,
   padding: 10px 0;
   width: 120px;
   border-radius: 10px;
-  cursor: none;
   transition: all 0.5s;
 }
 
@@ -1275,11 +1255,9 @@ section,
 }
 .swiper-button-prev{
   color: var(--accent-color);
-  cursor: none;
 }
 .swiper-button-next{
   color: var(--accent-color);
-  cursor: none;
 }
 .port_tool{
   display: flex;
@@ -1333,7 +1311,6 @@ section,
 .contact .more_btn{
   font-family: var(--heading-font);
   color: var(--accent-color);
-  cursor: none;
 }
 .contact .more_btn:hover{
   color: #fff;
